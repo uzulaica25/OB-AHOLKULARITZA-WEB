@@ -1,0 +1,115 @@
+/* Colores normales */
+
+.css-color-negro, .css-color-negro-hover:hover { color: #000000 }
+.css-color-gris-1, .css-color-gris-1-hover:hover { color: #191919 }
+.css-color-gris-2, .css-color-gris-2-hover:hover { color: #323232 }
+.css-color-gris-3, .css-color-gris-3-hover:hover { color: #4B4B4B }
+.css-color-gris-4, .css-color-gris-4-hover:hover { color: #646464 }
+.css-color-gris-5, .css-color-gris-5-hover:hover { color: #7D7D7D }
+.css-color-gris-6, .css-color-gris-6-hover:hover { color: #969696 }
+.css-color-gris-7, .css-color-gris-7-hover:hover { color: #AFAFAF }
+.css-color-gris-8, .css-color-gris-8-hover:hover { color: #C8C8C8 }
+.css-color-gris-9, .css-color-gris-9-hover:hover { color: #E1E1E1 }
+.css-color-gris-10, .css-color-gris-10-hover:hover { color: #FAFAFA }
+.css-color-blanco, .css-color-blanco-hover:hover { color: #FFFFFF }
+.css-color-transparent, .css-color-transparent-hover:hover { color: transparent; }
+
+.css-color-2-lighter, .css-color-2-lighter-hover:hover { color: #8e8e8e }
+.css-color-3-lighter, .css-color-3-lighter-hover:hover { color: #acacac }
+.css-color-4-lighter, .css-color-4-lighter-hover:hover { color: #ffffff }
+
+.css-color-2-light, .css-color-2-light-hover:hover { color: #757575 }
+.css-color-3-light, .css-color-3-light-hover:hover { color: #939393 }
+.css-color-4-light, .css-color-4-light-hover:hover { color: #ffffff }
+
+.css-color-1, .css-color-1-hover:hover { color: #F4F4F4 }
+.css-color-2, .css-color-2-hover:hover { color: #424242 }
+.css-color-3, .css-color-3-hover:hover { color: #606060 }
+.css-color-4, .css-color-4-hover:hover { color: #DDDDDD }
+.css-color-5, .css-color-5-hover:hover { color: #000000 }
+
+.css-color-2-dark, .css-color-2-dark-hover:hover { color: #0f0f0f }
+.css-color-3-dark, .css-color-3-dark-hover:hover { color: #2d2d2d }
+.css-color-4-dark, .css-color-4-dark-hover:hover { color: #aaaaaa }
+
+.css-color-2-darker, .css-color-2-darker-hover:hover { color: #000000 }
+.css-color-3-darker, .css-color-3-darker-hover:hover { color: #131313 }
+.css-color-4-darker, .css-color-4-darker-hover:hover { color: #909090 }
+
+
+/* Colores de borde */
+
+.css-borde-negro, .css-borde-negro-hover:hover { border-color: #000000 }
+.css-borde-gris-1, .css-borde-gris-1-hover:hover { border-color: #191919 }
+.css-borde-gris-2, .css-borde-gris-2-hover:hover { border-color: #323232 }
+.css-borde-gris-3, .css-borde-gris-3-hover:hover { border-color: #4B4B4B }
+.css-borde-gris-4, .css-borde-gris-4-hover:hover { border-color: #646464 }
+.css-borde-gris-5, .css-borde-gris-5-hover:hover { border-color: #7D7D7D }
+.css-borde-gris-6, .css-borde-gris-6-hover:hover { border-color: #969696 }
+.css-borde-gris-7, .css-borde-gris-7-hover:hover { border-color: #AFAFAF }
+.css-borde-gris-8, .css-borde-gris-8-hover:hover { border-color: #C8C8C8 }
+.css-borde-gris-9, .css-borde-gris-9-hover:hover { border-color: #E1E1E1 }
+.css-borde-gris-10, .css-borde-gris-10-hover:hover { border-color: #FAFAFA }
+.css-borde-blanco, .css-borde-blanco-hover:hover { border-color: #FFFFFF }
+.css-borde-transparent, .css-borde-transparent-hover:hover { border-color: transparent; }
+
+.css-borde-2-lighter, .css-borde-2-lighter-hover:hover { border-color: #8e8e8e }
+.css-borde-3-lighter, .css-borde-3-lighter-hover:hover { border-color: #acacac }
+.css-borde-4-lighter, .css-borde-4-lighter-hover:hover { border-color: #ffffff }
+
+.css-borde-2-light, .css-borde-2-light-hover:hover { border-color: #757575 }
+.css-borde-3-light, .css-borde-3-light-hover:hover { border-color: #939393 }
+.css-borde-4-light, .css-borde-4-light-hover:hover { border-color: #ffffff }
+
+.css-borde-1, .css-borde-1-hover:hover { border-color: #F4F4F4 }
+.css-borde-2, .css-borde-2-hover:hover { border-color: #424242 }
+.css-borde-3, .css-borde-3-hover:hover { border-color: #606060 }
+.css-borde-4, .css-borde-4-hover:hover { border-color: #DDDDDD }
+.css-borde-5, .css-borde-5-hover:hover { border-color: #000000 }
+
+.css-borde-2-dark, .css-borde-2-dark-hover:hover { border-color: #0f0f0f }
+.css-borde-3-dark, .css-borde-3-dark-hover:hover { border-color: #2d2d2d }
+.css-borde-4-dark, .css-borde-4-dark-hover:hover { border-color: #aaaaaa }
+
+.css-borde-2-darker, .css-borde-2-darker-hover:hover { border-color: #000000 }
+.css-borde-3-darker, .css-borde-3-darker-hover:hover { border-color: #131313 }
+.css-borde-4-darker, .css-borde-4-darker-hover:hover { border-color: #909090 }
+
+
+/* Colores de fondo */
+
+.css-bg-negro, .css-bg-negro-hover:hover { background-color: #000000; fill: #000000 }
+.css-bg-gris-1, .css-bg-gris-1-hover:hover { background-color: #191919; fill: #191919 }
+.css-bg-gris-2, .css-bg-gris-2-hover:hover { background-color: #323232; fill: #323232 }
+.css-bg-gris-3, .css-bg-gris-3-hover:hover { background-color: #4B4B4B; fill: #4B4B4B }
+.css-bg-gris-4, .css-bg-gris-4-hover:hover { background-color: #646464; fill: #646464 }
+.css-bg-gris-5, .css-bg-gris-5-hover:hover { background-color: #7D7D7D; fill: #7D7D7D }
+.css-bg-gris-6, .css-bg-gris-6-hover:hover { background-color: #969696; fill: #969696 }
+.css-bg-gris-7, .css-bg-gris-7-hover:hover { background-color: #AFAFAF; fill: #AFAFAF }
+.css-bg-gris-8, .css-bg-gris-8-hover:hover { background-color: #C8C8C8; fill: #C8C8C8 }
+.css-bg-gris-9, .css-bg-gris-9-hover:hover { background-color: #E1E1E1; fill: #E1E1E1 }
+.css-bg-gris-10, .css-bg-gris-10-hover:hover { background-color: #FAFAFA; fill: #FAFAFA }
+.css-bg-blanco, .css-bg-blanco-hover:hover { background-color: #FFFFFF; fill: #FFFFFF }
+.css-bg-transparent, .css-bg-transparent-hover:hover { background-color: transparent; }
+
+.css-bg-2-lighter, .css-bg-2-lighter-hover:hover { background-color: #8e8e8e; fill: #8e8e8e }
+.css-bg-3-lighter, .css-bg-3-lighter-hover:hover { background-color: #acacac; fill: #acacac }
+.css-bg-4-lighter, .css-bg-4-lighter-hover:hover { background-color: #ffffff; fill: #ffffff }
+
+.css-bg-2-light, .css-bg-2-light-hover:hover { background-color: #757575; fill: #757575 }
+.css-bg-3-light, .css-bg-3-light-hover:hover { background-color: #939393; fill: #939393 }
+.css-bg-4-light, .css-bg-4-light-hover:hover { background-color: #ffffff; fill: #ffffff }
+
+.css-bg-1, .css-bg-1-hover:hover { background-color: #F4F4F4; fill: #F4F4F4 }
+.css-bg-2, .css-bg-2-hover:hover { background-color: #424242; fill: #424242 }
+.css-bg-3, .css-bg-3-hover:hover { background-color: #606060; fill: #606060 }
+.css-bg-4, .css-bg-4-hover:hover { background-color: #DDDDDD; fill: #DDDDDD }
+.css-bg-5, .css-bg-5-hover:hover { background-color: #000000; fill: #000000 }
+
+.css-bg-2-dark, .css-bg-2-dark-hover:hover { background-color: #0f0f0f; fill: #0f0f0f }
+.css-bg-3-dark, .css-bg-3-dark-hover:hover { background-color: #2d2d2d; fill: #2d2d2d }
+.css-bg-4-dark, .css-bg-4-dark-hover:hover { background-color: #aaaaaa; fill: #aaaaaa }
+
+.css-bg-2-darker, .css-bg-2-darker-hover:hover { background-color: #000000; fill: #000000 }
+.css-bg-3-darker, .css-bg-3-darker-hover:hover { background-color: #131313; fill: #131313 }
+.css-bg-4-darker, .css-bg-4-darker-hover:hover { background-color: #909090; fill: #909090 }

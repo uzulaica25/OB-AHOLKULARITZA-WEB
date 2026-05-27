@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="eu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="nor_gara">OB Aholkularitza - Nor Gara</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght=300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* RESET & BASE */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(255,255,255,0.04), transparent 25%),
+                radial-gradient(circle at bottom right, rgba(255,255,255,0.03), transparent 25%),
+                #0b0d11;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 999;
+            background: rgba(8,10,14,0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+        }
+
+        .nav-container {
+            max-width: 1400px;
+            margin: auto;
+            padding: 14px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 55px;
+            display: block;
+            transition: .3s;
+        }
+
+        /* HAMBURGER MENU BOTOIA */
+        .menu-toggle {
+            display: none;
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #f3f4f6;
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            transition: .3s;
+        }
+
+        .nav-menu a:hover {
+            color: white;
+        }
+
+        .nav-menu > li > a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -7px;
+            width: 0%;
+            height: 2px;
+            background: #d1d5db;
+            transition: .3s;
+        }
+
+        .nav-menu > li > a:hover::after {
+            width: 100%;
+        }
+
+        /* DROPDOWN EGITURA BERRIA */
+        .dropdown {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .dropdown-toggle-icon {
+            cursor: pointer;
+            color: #f3f4f6;
+            transition: transform .3s ease;
+            font-size: 0.8rem;
+            padding: 4px;
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: calc(100% + 14px);
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            min-width: 280px;
+            background: rgba(15,17,21,0.98);
+            backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 10px;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s ease;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+        }
+
+        /* Ordenagailuko bertsiorako Hover efektua */
+        @media (min-width: 851px) {
+            .dropdown:hover .dropdown-menu {
+                opacity: 1;
+                visibility: visible;
+                transform: translateX(-50%) translateY(0);
+            }
+            .dropdown:hover .dropdown-toggle-icon {
+                transform: rotate(180deg);
+            }
+        }
+
+        .dropdown-menu a {
+            display: block;
+            padding: 12px 14px;
+            border-radius: 10px;
+            color: #d1d5db;
+            font-weight: 500;
+        }
+
+        .dropdown-menu a:hover {
+            background: rgba(255,255,255,0.06);
+            color: white;
+            transform: translateX(4px);
+        }
+
+        /* HERO SECTION - ERAKUSLEIHO BERRIA */
+        .about-section {
+            padding-top: 120px;
+        }
+
+        .intro-about-clean {
+            width: 100%;
+            padding: 80px 24px;
+            background: #171b22;
+        }
+
+        .intro-clean-container {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-text-side {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 24px;
+            text-align: left;
+        }
+
+        .intro-clean-title {
+            font-size: clamp(2rem, 4.5vw, 3rem);
+            font-weight: 900;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -1px;
+        }
+
+        .intro-clean-text {
+            color: #cbd5e1;
+            font-size: 1.05rem;
+            line-height: 1.75;
+        }
+
+        .intro-clean-btn {
+            padding: 14px 32px;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.25);
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+            display: inline-block;
+        }
+
+        .intro-clean-btn:hover {
+            background: white;
+            color: #0f1115;
+            transform: translateY(-3px);
+        }
+
+        .intro-image-side img {
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: cover;
+            border-radius: 24px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.35);
+            display: block;
+        }
+
+        /* FEATURES FULL WIDTH */
+        .about-features {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            padding: 110px 40px;
+            background: linear-gradient(180deg, #ffffff, #f7f8fa);
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            overflow: hidden;
+            border-top: 1px solid rgba(0,0,0,0.06);
+            border-bottom: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .feature-card {
+            position: relative;
+            padding: 60px 42px;
+            background: transparent;
+            transition: all .4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            width: 100%;
+        }
+
+        @media (min-width: 981px) {
+            .feature-card:not(:last-child) {
+                border-right: 1px solid rgba(0,0,0,0.08);
+            }
+        }
+
+        .feature-card:hover {
+            background: rgba(255,255,255,0.7);
+        }
+
+        .feature-card i {
+            width: 84px;
+            height: 84px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 26px;
+            background: linear-gradient(135deg, #111827, #1f2937);
+            color: white;
+            font-size: 32px;
+            margin-bottom: 26px;
+            box-shadow: 0 20px 40px rgba(17,24,39,.18);
+            transition: transform .3s ease;
+        }
+
+        .feature-card:hover i {
+            transform: translateY(-6px) scale(1.05);
+        }
+
+        .feature-card h3 {
+            font-size: 1.8rem;
+            color: #111827;
+            margin-bottom: 12px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .feature-card p {
+            color: #6b7280;
+            line-height: 1.8;
+            font-size: 1.05rem;
+            max-width: 450px;
+            width: 100%;
+        }
+
+        .features-button-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 50px 20px 90px;
+            background: #ffffff;
+        }
+
+        .features-main-btn {
+            display: inline-flex;
+            padding: 18px 34px;
+            border-radius: 999px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1rem;
+            transition: all .35s ease;
+            box-shadow: 0 18px 40px rgba(17,24,39,.18);
+        }
+
+        .features-main-btn:hover {
+            transform: translateY(-5px) scale(1.03);
+            background: #000;
+        }
+
+        /* BALIOEN ATAL BERRIA (ARGAZKIA ZEGOEN LEKUAN) */
+        .values-section {
+            background: #11141a;
+            padding: 100px 24px;
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .values-title {
+            font-size: clamp(2rem, 4vw, 2.5rem);
+            font-weight: 800;
+            color: white;
+            margin-bottom: 50px;
+            letter-spacing: -1px;
+        }
+
+        .values-grid {
+            max-width: 1300px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .value-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 50px 35px;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .value-item i {
+            font-size: 2.8rem;
+            color: #cbd5e1;
+            margin-bottom: 24px;
+            display: inline-block;
+        }
+
+        .value-item h4 {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 14px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .value-item p {
+            color: #94a3b8;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        /* CTA */
+        .about-cta {
+            width: 100%;
+            padding: 120px 40px;
+            text-align: center;
+            background: white;
+            color: #111827;
+            border-top: 1px solid rgba(0,0,0,0.06);
+        }
+
+        .about-cta h2 {
+            font-size: clamp(2.6rem, 5vw, 5rem);
+            font-weight: 900;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+            color: #111827;
+        }
+
+        .about-cta p {
+            color: #4b5563;
+            max-width: 760px;
+            margin: auto;
+            line-height: 1.9;
+            font-size: 1.08rem;
+        }
+
+        .cta-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 42px;
+            padding: 20px 38px;
+            border-radius: 999px;
+            background: #111827;
+            color: white;
+            text-decoration: none;
+            font-weight: 800;
+            transition: .4s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-6px) scale(1.03);
+            background: #000;
+        }
+
+        /* FOOTER */
+        footer {
+            background: linear-gradient(180deg, #080a0d, #050608);
+            padding: 110px 20px 50px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+        }
+
+        .footer-grid {
+            max-width: 1400px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+        }
+
+        .footer-logo img {
+            width: 220px;
+        }
+
+        .footer-title {
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            color: white;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+            color: #9ca3af;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            margin-top: 70px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.08);
+            text-align: center;
+            color: #6b7280;
+        }
+        
+        .footer-bottom a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            opacity: 0.8;
+        }
+
+        /* RESPONSIVE MEDIA QUERIES */
+        @media (max-width: 980px) {
+            .intro-clean-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .intro-text-side {
+                text-align: center;
+                align-items: center;
+            }
+
+            .intro-image-side img {
+                max-height: 380px;
+                margin: auto;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+                padding: 60px 24px;
+            }
+
+            .feature-card {
+                border-right: none !important;
+                border-bottom: 1px solid rgba(0,0,0,0.08);
+                padding: 50px 24px;
+            }
+
+            .feature-card:last-child {
+                border-bottom: none;
+            }
+        }
+
+        @media (max-width: 850px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            .logo img {
+                height: 45px;
+            }
+
+            .dropdown {
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+
+            .nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #0f1115;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 24px;
+                gap: 20px;
+                border-bottom: 1px solid rgba(255,255,255,0.1);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-10px);
+                transition: .3s ease;
+                max-height: 80vh;
+                overflow-y: auto;
+            }
+
+            .nav-menu.active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            .nav-menu li {
+                width: 100%;
+            }
+
+            .nav-menu a {
+                display: inline-block;
+                width: auto;
+                padding: 8px 0;
+                font-size: 1.1rem;
+            }
+
+            #menuitem-lang-eu, #menuitem-lang-es {
+                display: inline-block;
+                width: auto;
+                margin-right: 15px;
+            }
+
+            /* Dropdown bertsio mugikorra */
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                opacity: 1;
+                visibility: visible;
+                max-height: 0;
+                overflow: hidden;
+                padding: 0;
+                border: none;
+                background: transparent;
+                box-shadow: none;
+                transition: max-height 0.3s ease;
+                width: 100%;
+            }
+
+            .dropdown.active .dropdown-menu {
+                max-height: 400px;
+                padding: 10px 0 0 15px;
+            }
+
+            .dropdown.active .dropdown-toggle-icon {
+                transform: rotate(180deg);
+            }
+
+            .dropdown-menu a {
+                padding: 10px 0;
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .about-section {
+                padding-top: 140px;
+            }
+            .about-cta {
+                padding: 80px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Media/terrealdayazpeitia/dayvo/logo-ong.png" alt="Logo">
+            </a>
+
+            <button class="menu-toggle" id="mobile-menu-btn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="nav-menu" id="nav-links">
+                <li><a href="index.html" data-i18n="menu_home">HASIERA</a></li>
+                <li><a href="quienes-somos.html" data-i18n="menu_about">Nor Gara?</a></li>
+                
+                <li class="dropdown" id="services-dropdown">
+                    <a href="servicios.html">
+                        <span data-i18n="menu_services">Zerbitzuak</span>
+                    </a>
+                    <i class="fa-solid fa-chevron-down dropdown-toggle-icon" id="dropdown-arrow"></i>
+                    
+                    <ul class="dropdown-menu">
+                        <li><a href="dirulaguntzak.html" data-i18n="service_grants_title">Diru laguntzak</a></li>
+                        <li><a href="kontabilitatea.html" data-i18n="service_accounting_title">Kontabilitatea</a></li>
+                        <li><a href="jubilazioa.html" data-i18n="service_retirement_title">Jubilazioa, aitatasuna eta amatasuna</a></li>
+                        <li><a href="lanahol.html" data-i18n="service_labor_title">Laboral arloa</a></li>
+                        <li><a href="zerga.html" data-i18n="service_tax_title">Fiskalitatea</a></li>
+                        <li><a href="errenta.html" data-i18n="service_renta_title">Errenta</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="contacto.html" data-i18n="menu_contact">Kontaktua</a></li>
+                <li id="menuitem-lang-eu">
+                    <a href="#" data-lang="eu" title="Euskara">
+                        <img src="Media/terrealdayazpeitia/dayvo/euskera.jpg" alt="Euskara" style="width:34px;height:24px;border-radius:6px;">
+                    </a>
+                </li>
+                <li id="menuitem-lang-es">
+                    <a href="#" data-lang="es" title="Castellano">
+                        <img src="Media/terrealdayazpeitia/dayvo/españa.jpg" alt="Castellano" style="width:34px;height:24px;border-radius:6px;">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <section class="intro-about-clean">
+                <div class="intro-clean-container">
+                    
+                    <div class="intro-text-side">
+                        <h2 class="intro-clean-title" data-i18n="intro_title">
+                            Konfiantzazko bidelaguna zure negoziorako
+                        </h2>
+                        <p class="intro-clean-text" data-i18n="intro_desc">
+                            OB Aholkularitza Azpeitian kokatutako aholkularitza profesionala da.
+                            Gure helburua enpresei eta partikularrei zerbitzu integrala eskaintzea da,
+                            hurbiltasunarekin, konfiantzarekin eta kalitatezko kudeaketarekin.
+                            <br><br>
+                            Zure beharretara egokitzen gara, kudeaketa administratibotik haratago doan zerbitzu pertsonalizatua eskainiz.
+                        </p>
+                        
+                    </div>
+
+                    <div class="intro-image-side">
+                        <img src="Media/terrealdayazpeitia/dayvo/AMATIA3.jpg" alt="OB Aholkularitza Taldea">
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="about-features">
+            <div class="feature-card">
+                <i class="fa-solid fa-briefcase"></i>
+                <h3 data-i18n="feature_1_title">+27 urte</h3>
+                <p data-i18n="feature_1_desc">Esperientzia profesional solidoa enpresa eta autonomoekin lanean.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-users"></i>
+                <h3 data-i18n="feature_2_title">Arreta pertsonala</h3>
+                <p data-i18n="feature_2_desc">Bezero bakoitzaren beharretara egokitutako gertuko zerbitzua.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fa-solid fa-building"></i>
+                <h3 data-i18n="feature_3_title">100+ bezero</h3>
+                <p data-i18n="feature_3_desc">Urteetan zehar konfiantza eman diguten enpresa eta autonomoak.</p>
+            </div>
+        </div>
+
+        <div class="features-button-wrapper">
+            <a href="servicios.html" class="features-main-btn" data-i18n="feature_btn">IKUSI ZERBITZUAK</a>
+        </div>
+
+        <section class="values-section" id="balioak">
+            <h3 class="values-title" data-i18n="values_main_title">Gure oinarri nagusiak</h3>
+            <div class="values-grid">
+                <div class="value-item">
+                    <i class="fa-solid fa-handshake-angle"></i>
+                    <h4 data-i18n="value_1_title">Hurbiltasuna</h4>
+                    <p data-i18n="value_1_desc">Ez gara zenbaki kudeatzaile soilak; gertutik jarraitzen dugu zure proiektuaren eguneroko bilakaera.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fa-solid fa-shield-halved"></i>
+                    <h4 data-i18n="value_2_title">Konfiantza</h4>
+                    <p data-i18n="value_2_desc">Zidartasun eta gardentasun osoz lan egiten dugu, gure bezeroen lasaitasuna bermatuz alor guztietan.</p>
+                </div>
+                <div class="value-item">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h4 data-i18n="value_3_title">Eraginkortasuna</h4>
+                    <p data-i18n="value_3_desc">Irtenbide azkarrak, seguruak eta egokiak eskaintzen ditugu legedi berrien eta administrazioaren aurrean.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section class="about-cta">
+        <h2 data-i18n="about_cta_title">Zure enpresari lagundu nahi diogu</h2>
+        <p data-i18n="about_cta_desc">Gure esperientzia eta gertutasuna zure zerbitzura jartzen ditugu.</p>
+        <a href="contacto.html" class="cta-btn" data-i18n="about_cta_btn">Jarri gurekin harremanetan</a>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-logo">
+                    <img src="Media/terrealdayazpeitia/dayvo/logo-ong.png" alt="Logo">
+                    <img src="Media/terrealdayazpeitia/dayvo/REAF.jpeg" alt="REAF" style="width:180px; margin-top:20px; border-radius:14px; display:block;">
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="contact_title">Kontaktua</h3>
+                    <ul class="footer-links">
+                        <li>943 150 509</li>
+                        <li>ob@asesoriaob.eus</li>
+                        <li data-i18n="footer_address">Azpeitia, Gipuzkoa</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title" data-i18n="footer_nav">Nabigazioa</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="menu_home">HASIERA</a></li>
+                        <li><a href="quienes-somos.html" data-i18n="menu_about">NOR GARA?</a></li>
+                        <li><a href="servicios.html" data-i18n="menu_services">ZERBITZUAK</a></li>
+                        <li><a href="contacto.html" data-i18n="menu_contact">KONTAKTUA</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 OB AHOLKULARITZA |
+                <a href="politika.html" data-i18n="privacy_policy">
+                    Pribatutasun Politika
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // MUGIKORREKO MENUA LOGIKA
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+        const servicesDropdown = document.getElementById('services-dropdown');
+        const dropdownArrow = document.getElementById('dropdown-arrow');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.className = 'fa-solid fa-xmark';
+            } else {
+                icon.className = 'fa-solid fa-bars';
+                servicesDropdown.classList.remove('active');
+            }
+        });
+
+        // MUGIKORREAN: Geziari ematen bazaio klik soilik zabalduko da azpimenua orrialdera joan gabe
+        if (dropdownArrow) {
+            dropdownArrow.addEventListener('click', function(e) {
+                if (window.innerWidth <= 850) {
+                    e.preventDefault();
+                    e.stopPropagation(); // Klik-a gurasoari ez pasatzeko
+                    servicesDropdown.classList.toggle('active');
+                }
+            });
+        }
+
+        // ITZULPENAK & OBSERVER
+        let lang = localStorage.getItem("lang") || "eu";
+        const urlLang = new URLSearchParams(window.location.search).get("lang");
+
+        if (urlLang) {
+            lang = urlLang;
+            localStorage.setItem("lang", lang);
+        }
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting){
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.15 });
+
+        loadTranslations(lang);
+
+        function loadTranslations(selectedLang) {
+            fetch(`lang/${selectedLang}.json`)
+                .then(response => response.json())
+                .then(translations => {
+                    document.querySelectorAll("[data-i18n]").forEach(element => {
+                        const key = element.getAttribute("data-i18n");
+                        if (translations[key]) {
+                            element.innerHTML = translations[key];
+                        }
+                    });
+
+                    const grid = document.getElementById("servicesGrid");
+                    if(grid && translations.services){
+                        grid.innerHTML = translations.services.map(service => `
+                            <div class="service-card">
+                                <i class="fa-solid ${service.icon}"></i>
+                                <h3>${service.title}</h3>
+                                <p>${service.text}</p>
+                            </div>
+                        `).join("");
+
+                        document.querySelectorAll('.service-card').forEach(card => {
+                            observer.observe(card);
+                        });
+                    }
+                }).catch(err => console.error("Errorea fitxategia kargatzean:", err));
+        }
+
+        document.querySelectorAll("[data-lang]").forEach(link => {
+            link.addEventListener("click", function (e) {
+                e.preventDefault();
+                const selectedLang = this.getAttribute("data-lang");
+                localStorage.setItem("lang", selectedLang);
+                loadTranslations(selectedLang);
+            });
+        });
+    </script>
+</body>
+</html>

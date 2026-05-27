@@ -1,0 +1,179 @@
+.navbar-default {
+    border-width: 0 0 2px 0;
+    border-radius: 0px;
+}
+
+.navbar-default .navbar-nav > li > a {
+    margin: 0 0 -2px 0;
+    border-width: 0 0 2px 0;
+}
+
+.body-mainmenu-on-top-fixed {
+    padding-top: 117px;
+}
+
+.body-menu-fixed-top {
+    padding-top: 95px;
+}
+
+.navbar {
+    min-height: 95px;
+}
+
+.navbar-brand {
+    height: 95px;
+}
+
+.navbar-brand img {
+    height: 75px;
+}
+
+@media (min-width: 992px) {
+
+    .navbar-nav > li > a {
+        padding-top: 36px;
+        padding-bottom: 36px;
+    }
+
+}
+
+.navbar-toggle {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+body {
+    background: #ffffff; /* Fondo de la página */
+    color: #333333; /* Color del texto de la web */
+}
+
+.wrapper {
+    background: #ffffff; /* Fondo del wrapper */
+}
+
+a {
+    color: #337ab7; /* Color de los enlaces */
+}
+
+a:hover {
+    color: #23527c; /* Color de los enlaces (hover) */
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #333333; /* Color de los encabezados */
+}
+
+.layout-header {
+    background: transparent; /* Fondo del cabecero */
+    color: #333333; /* Color del texto del cabecero */
+}
+
+.layout-header a {
+    color: #ffffff; /* Color de los enlaces del cabecero */
+}
+
+.layout-header a:hover {
+    color: #ffffff; /* Color de los enlaces del cabecero (hover) */
+}
+
+.navbar-default,
+.navbar-default .dropdown-menu {
+    background: #606060; /* Fondo del menú */
+    border-color: #606060; /* Borde del menú */
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus,
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:hover,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .open > a:hover,
+.navbar-default .navbar-nav > .open > a:focus,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+    background: #606060; /* Fondo del menú (hover) */
+    color: #FFFFFF; /* Color de los enlaces del menú (hover)*/
+    border-color: #FFFFFF; /* Color del borde del menú (hover) */
+}
+
+    .navbar-default .navbar-nav > li > a,
+    .dropdown-menu > li > a,
+    .dropdown-menu > li > :not(a):hover,
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #FFFFFF; /* Color de los enlaces del menú */
+    }
+
+/* Menu Fixed */
+
+.navbar-fixed-top .navbar-default,
+.navbar-fixed-top .navbar-default .dropdown-menu {
+    background: #606060; /* Fondo del menú */
+    border-color: #606060; /* Borde del menú */
+}
+
+.navbar-fixed-top .navbar-default .navbar-nav > li > a,
+.navbar-fixed-top .dropdown-menu > li > a,
+.navbar-fixed-top .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #FFFFFF; /* Color de los enlaces del menú */
+}
+
+.navbar-fixed-top .navbar-default .navbar-nav > li > a:hover,
+.navbar-fixed-top .navbar-default .navbar-nav > li > a:focus,
+.navbar-fixed-top .navbar-default .navbar-nav > .active > a,
+.navbar-fixed-top .navbar-default .navbar-nav > .active > a:hover,
+.navbar-fixed-top .navbar-default .navbar-nav > .active > a:focus,
+.navbar-fixed-top .navbar-default .navbar-nav > .open > a,
+.navbar-fixed-top .navbar-default .navbar-nav > .open > a:hover,
+.navbar-fixed-top .navbar-default .navbar-nav > .open > a:focus,
+.navbar-fixed-top .dropdown-menu > li > a:hover,
+.navbar-fixed-top .dropdown-menu > li > a:focus {
+    background: #606060; /* Fondo del menú (hover) */
+    color: #FFFFFF; /* Color de los enlaces del menú (hover)*/
+    border-color: #FFFFFF; /* Color del borde del menú (hover) */
+}
+
+/* Widget */
+
+.panel-default.widget,
+.panel-default.widget > .panel-heading {
+    border-color: #dddddd; /* Color del borde de los widgets */
+}
+
+.panel-default.widget > .panel-heading {
+    background: #ffffff; /* Fondo del título de los widgets */
+    color: #333333; /* Color del título de los widgets */
+}
+
+/* Faltante: widget-bg-body, widget-bg --> widget-bg-title */
+
+.layout-footer {
+    background: #606060; /* Fondo del pie */
+    color: #fff; /* Color del texto del pie */
+}
+
+.layout-footer a {
+    color: #fff; /* Color de los enlaces del pie */
+}
+
+.layout-footer a:hover {
+    color: #fff; /* Color de los enlaces del pie (hover) */
+}
+body {
+    font-family: "Open Sans" !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Montserrat" !important;
+}
+
+.navbar-nav {
+    font-family: "Open Sans" !important;
+}
+.navbar-default { font-size: 0.8em }
+.dropdown-menu { font-size: 1em; }
+@media screen and (max-width: 1024px) and (min-width: 768px){
+}
+@media screen and (max-width: 767px){
+}
