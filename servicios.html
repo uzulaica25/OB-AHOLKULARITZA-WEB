@@ -67,7 +67,7 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(9, 11, 15, 0.85);
+            background: #A69F9F;
             backdrop-filter: blur(20px);
             -webkit-backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.06);
@@ -115,7 +115,7 @@
         }
         .nav-menu a {
             text-decoration: none;
-            color: #cbd5e1;
+            color: #ffffff;
             font-weight: 600;
             font-size: 0.9rem;
             letter-spacing: 0.5px;
@@ -163,7 +163,7 @@
             left: 50%;
             transform: translateX(-50%) translateY(10px);
             min-width: 260px;
-            background: #0f1115;
+            background: #A69F9F;
             border: 1px solid rgba(255, 255, 255, 0.08);
             border-radius: 12px;
             padding: 8px;
@@ -190,7 +190,7 @@
             display: block;
             padding: 10px 14px;
             border-radius: 8px;
-            color: #9ca3af;
+            color: #ffffff;
             font-weight: 500;
             font-size: 0.85rem;
         }
@@ -225,9 +225,7 @@
             text-align: center;
             padding: 100px 24px 60px;
             background:
-                radial-gradient(circle at top, rgba(255,255,255,0.1), transparent 55%),
-                linear-gradient(rgba(0,0,0,.75), rgba(0,0,0,.85)),
-                url("Media/hero-bg.jpg");
+                #A69F9F;
             background-size: cover;
             background-position: center;
             position: relative;
@@ -246,7 +244,7 @@
         }
         .hero-content p {
             font-size: 1.1rem;
-            color: #cbd5e1;
+            color: #ffffff;
             max-width: 700px;
             margin: auto;
             line-height: 1.7;
@@ -294,7 +292,7 @@
             color: #090b0f;
         }
         .service-card:nth-child(even) {
-            background: #0f1115;
+            background: #A69F9F;
             color: #ffffff;
             flex-direction: row-reverse;
         }
@@ -380,7 +378,7 @@
             FOOTER
         ========================= */
         footer {
-            background: #07080b;
+            background: #A69F9F;
             padding: 80px 24px 40px;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -408,11 +406,11 @@
         }
         .footer-links li {
             margin-bottom: 12px;
-            color: #9ca3af;
+            color: #ffffff;
             font-size: 0.9rem;
         }
         .footer-links a {
-            color: #9ca3af;
+            color: #ffffff;
             text-decoration: none;
             transition: color 0.2s;
         }
@@ -424,7 +422,7 @@
             padding-top: 24px;
             border-top: 1px solid rgba(255,255,255,0.06);
             text-align: center;
-            color: #4b5563;
+            color: #ffffff;
             font-size: 0.85rem;
         }
 .footer-bottom a {
@@ -599,12 +597,15 @@
                 <i class="fa-solid fa-chevron-down dropdown-toggle-icon" id="dropdown-arrow"></i>
                 
                 <ul class="dropdown-menu">
-                    <li><a href="dirulaguntzak.html" data-i18n="service_grants_title">Diru laguntzak</a></li>
-                    <li><a href="kontabilitatea.html" data-i18n="service_accounting_title">Kontabilitatea</a></li>
-                    <li><a href="jubilazioa.html" data-i18n="service_retirement_title">Jubilazioa, aitatasuna eta amatasuna</a></li>
                     <li><a href="lanahol.html" data-i18n="service_labor_title">Laboral arloa</a></li>
-                    <li><a href="zerga.html" data-i18n="service_tax_title">Fiskalitatea</a></li>
-                    <li><a href="errenta.html" data-i18n="service_renta_title">Errenta</a></li>
+                         <li><a href="zerga.html" data-i18n="service_tax_title">Fiskalitatea</a></li>
+                          <li><a href="kontabilitatea.html" data-i18n="service_accounting_title">Kontabilitatea</a></li>
+                           <li><a href="errenta.html" data-i18n="service_renta_title">Errenta</a></li>
+                           <li><a href="jubilazioa.html" data-i18n="service_retirement_title">Jubilazioa, aitatasuna eta amatasuna</a></li>
+                        
+                        <li><a href="dirulaguntzak.html" data-i18n="service_grants_title">Diru laguntzak</a></li>
+                    
+                      
                 </ul>
             </li>
             
@@ -638,17 +639,28 @@
 
         <div class="service-card">
             <div class="service-image">
-                <img src="Media/terrealdayazpeitia/dayvo/dirulaguntzak.jpg" alt="Diru laguntzak">
+                <img src="Media/terrealdayazpeitia/dayvo/entrevista-2560x950-1.jpg" alt="Laboral arloa">
             </div>
             <div class="service-content">
-                <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
-                <h3 data-i18n="service_grants_title">Diru laguntzak</h3>
-                <p data-i18n="service_grants_desc">Diru laguntzen eta subvencio publikoen tramitazio osoa egiten dugu, aukera egokienak bilatuz eta dokumentazio guztia prestatuz.</p>
-                <a href="dirulaguntzak.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+                <h3 data-i18n="service_labor_title">Laboral arloa</h3>
+                <p data-i18n="service_labor_desc">Nominen kudeaketa, kontratuak eta Gizarte Segurantzako tramite guztiak profesionaltasunez lantzen ditugu.</p>
+                <a href="lanahol.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+         <div class="service-card">
+            <div class="service-image">
+                <img src="Media/terrealdayazpeitia/dayvo/fiscalidad.jpg" alt="Fiskalitatea">
+            </div>
+            <div class="service-content">
+                <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                <h3 data-i18n="service_tax_title">Fiskalitatea</h3>
+                <p data-i18n="service_tax_desc">Zerga aholkularitza integrala eskaintzen dugu, obligazio fiskalak modu seguruan eta eraginkorrean betetzeko.</p>
+                <a href="zerga.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
-        <div class="service-card">
+            <div class="service-card">
             <div class="service-image">
                 <img src="Media/terrealdayazpeitia/dayvo/finances-saving-economy-concept.png" alt="Kontabilitatea">
             </div>
@@ -659,6 +671,20 @@
                 <a href="kontabilitatea.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
+           <div class="service-card">
+            <div class="service-image">
+                <img src="Media/terrealdayazpeitia/dayvo/declaracion-de-la-renta-2024.png" alt="Errenta">
+            </div>
+            <div class="service-content">
+                <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
+                <h3 data-i18n="service_renta_title">Errenta</h3>
+                <p data-i18n="service_renta_desc">Errenta aitorpenaren prestaketa eta aurkezpena egiten dugu, ahalik eta emaitza onena lortzeko orientazio pertsonalarekin.</p>
+                <a href="errenta.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+        
+
+    
 
         <div class="service-card">
             <div class="service-image">
@@ -671,42 +697,23 @@
                 <a href="jubilazioa.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
-
         <div class="service-card">
             <div class="service-image">
-                <img src="Media/terrealdayazpeitia/dayvo/entrevista-2560x950-1.jpg" alt="Laboral arloa">
+                <img src="Media/terrealdayazpeitia/dayvo/dirulaguntzak.jpg" alt="Diru laguntzak">
             </div>
             <div class="service-content">
-                <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
-                <h3 data-i18n="service_labor_title">Laboral arloa</h3>
-                <p data-i18n="service_labor_desc">Nominen kudeaketa, kontratuak eta Gizarte Segurantzako tramite guztiak profesionaltasunez lantzen ditugu.</p>
-                <a href="lanahol.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
+                <div class="service-icon"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+                <h3 data-i18n="service_grants_title">Diru laguntzak</h3>
+                <p data-i18n="service_grants_desc">Diru laguntzen eta subvencio publikoen tramitazio osoa egiten dugu, aukera egokienak bilatuz eta dokumentazio guztia prestatuz.</p>
+                <a href="dirulaguntzak.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>
 
-        <div class="service-card">
-            <div class="service-image">
-                <img src="Media/terrealdayazpeitia/dayvo/fiscalidad.jpg" alt="Fiskalitatea">
-            </div>
-            <div class="service-content">
-                <div class="service-icon"><i class="fa-solid fa-scale-balanced"></i></div>
-                <h3 data-i18n="service_tax_title">Fiskalitatea</h3>
-                <p data-i18n="service_tax_desc">Zerga aholkularitza integrala eskaintzen dugu, obligazio fiskalak modu seguruan eta eraginkorrean betetzeko.</p>
-                <a href="zerga.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
+  
 
-        <div class="service-card">
-            <div class="service-image">
-                <img src="Media/terrealdayazpeitia/dayvo/declaracion-renta-2026-fechas-novedades-scaled-rjwpypeohar9rtzqgad6iuejaeak4x1heiwlgfj62w.jpg" alt="Errenta">
-            </div>
-            <div class="service-content">
-                <div class="service-icon"><i class="fa-solid fa-file-invoice-dollar"></i></div>
-                <h3 data-i18n="service_renta_title">Errenta</h3>
-                <p data-i18n="service_renta_desc">Errenta aitorpenaren prestaketa eta aurkezpena egiten dugu, ahalik eta emaitza onena lortzeko orientazio pertsonalarekin.</p>
-                <a href="errenta.html" class="service-btn">Informazio gehiago <i class="fa-solid fa-arrow-right"></i></a>
-            </div>
-        </div>
+    
+
+     
 
     </div>
 </section>

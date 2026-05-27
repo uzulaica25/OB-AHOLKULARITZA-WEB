@@ -39,7 +39,7 @@
             left: 0;
             width: 100%;
             z-index: 999;
-            background: rgba(8,10,14,0.85);
+            background: #A69F9F;
             backdrop-filter: blur(20px);
             border-bottom: 1px solid rgba(255,255,255,0.06);
             box-shadow: 0 10px 30px rgba(0,0,0,0.18);
@@ -128,7 +128,7 @@
             left: 50%;
             transform: translateX(-50%) translateY(10px);
             min-width: 280px;
-            background: rgba(15,17,21,0.98);
+            background: #A69F9F;
             backdrop-filter: blur(18px);
             border: 1px solid rgba(255,255,255,0.08);
             border-radius: 16px;
@@ -156,7 +156,7 @@
             display: block;
             padding: 12px 14px;
             border-radius: 10px;
-            color: #d1d5db;
+            color:white;
             font-weight: 500;
         }
 
@@ -223,7 +223,7 @@
         /* INTRO ABOUT */
         .intro-about {
             width: 100%;
-            background: #171b22;
+            background: #A69F9F;
         }
 
         .intro-container {
@@ -248,7 +248,7 @@
         }
 
         .intro-text {
-            color: #cbd5e1;
+            color: #ffffff;
             line-height: 1.8;
             font-size: 1.05rem;
             margin-bottom: 30px;
@@ -309,13 +309,7 @@
             line-height: 1.6;
         }
 
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+       
 
         .service-card {
             display: flex;
@@ -528,7 +522,7 @@
 
         /* FOOTER */
         footer {
-            background: #080a0d;
+            background: #A69F9F;
             padding: 60px 24px 30px;
             border-top: 1px solid rgba(255,255,255,0.05);
         }
@@ -558,12 +552,12 @@
 
         .footer-links li {
             margin-bottom: 12px;
-            color: #9ca3af;
+            color: #ffffff;
             font-size: 0.95rem;
         }
 
         .footer-links a {
-            color: #9ca3af;
+            color: #ffffff;
             text-decoration: none;
             transition: 0.3s;
         }
@@ -577,7 +571,7 @@
             padding-top: 24px;
             border-top: 1px solid rgba(255,255,255,0.08);
             text-align: center;
-            color: #6b7280;
+            color: #ffffff;
             font-size: 0.9rem;
         }
         .footer-bottom a {
@@ -587,6 +581,27 @@
 
 .footer-bottom a:hover {
     opacity: 0.8;
+}
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 1050px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Mugikorra */
+@media (max-width: 640px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
         /* RESPONSIVE MEDIA QUERIES ("Nor Gara" logikarekin sinkronizatua) */
@@ -722,12 +737,18 @@
                     <i class="fa-solid fa-chevron-down dropdown-toggle-icon" id="dropdown-arrow"></i>
                     
                     <ul class="dropdown-menu">
-                        <li><a href="dirulaguntzak.html" data-i18n="service_grants_title">Diru laguntzak</a></li>
-                        <li><a href="kontabilitatea.html" data-i18n="service_accounting_title">Kontabilitatea</a></li>
-                        <li><a href="jubilazioa.html" data-i18n="service_retirement_title">Jubilazioa, aitatasuna eta amatasuna</a></li>
                         <li><a href="lanahol.html" data-i18n="service_labor_title">Laboral arloa</a></li>
-                        <li><a href="zerga.html" data-i18n="service_tax_title">Fiskalitatea</a></li>
-                        <li><a href="errenta.html" data-i18n="service_renta_title">Errenta</a></li>
+                         <li><a href="zerga.html" data-i18n="service_tax_title">Fiskalitatea</a></li>
+                          <li><a href="kontabilitatea.html" data-i18n="service_accounting_title">Kontabilitatea</a></li>
+                           <li><a href="errenta.html" data-i18n="service_renta_title">Errenta</a></li>
+                           <li><a href="jubilazioa.html" data-i18n="service_retirement_title">Jubilazioa, aitatasuna eta amatasuna</a></li>
+                        
+                        <li><a href="dirulaguntzak.html" data-i18n="service_grants_title">Diru laguntzak</a></li>
+                    
+                      
+                        
+                        
+                        
                     </ul>
                 </li>
 
@@ -748,7 +769,7 @@
 
     <section class="hero">
         <video autoplay muted loop playsinline class="hero-video">
-            <source src="Media/terrealdayazpeitia/dayvo/lv_0_20260527085107.mp4">
+            <source src="Media/terrealdayazpeitia/dayvo/BIDEOONA.mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
