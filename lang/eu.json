@@ -16,7 +16,7 @@
   "btn_more": "GEHIAGO JAKIN →",
   "btn_more_info": "Informazio gehiago",
   "cta_title": "Jarri gurekin harremanetan",
-  "cta_subtitle": "Ordutegia eta kontaktu zuzenak aqui aurkituko dituzu",
+  "cta_subtitle": "Ordutegia eta kontaktu zuzenak hemen aurkituko dituzu",
   "hours_title": "Ordutegia",
   "contact_title": "Kontaktua",
   "days_mon_thu": "Astelehenetik - Ostegunera",
@@ -129,7 +129,7 @@
   "privacy_hero_text": "Webgune honetan jasotzen diren datu pertsonalak modu seguruan eta konfidentzialean tratatzen dira, indarrean dagoen datu babeserako araudia errespetatuz.",
 
   "privacy_section_1_title": "1. Datu pertsonalen tratamendua",
-  "privacy_section_1_text": "Kontaktu formularioaren bidez erabiltzaileak ematen dituen datuak OB AHOLKULARITZA enpresak erabiliko ditu erabiltzailearekin harremanetan jartzeko eta eskatutako informazioari erantzuteko.",
+  "privacy_section_1_text": "Kontaktu formularioaren bidez erabiltzaileak ematen dituen datuak ONINTZA BASTARRIKA AHOLKULARITZA S.L enpresak erabiliko ditu erabiltzailearekin harremanetan jartzeko eta eskatutako informazioari erantzuteko.",
 
   "privacy_section_2_title": "2. Jasotzen diren datuak",
   "privacy_section_2_text": "Webguneko formularioetan ondorengo datuak eskatu ahal izango dira:",
@@ -145,7 +145,7 @@
   "privacy_use_3": "Eskatutako zerbitzuei buruzko informazioa emateko",
 
   "privacy_section_4_title": "4. Datuen segurtasuna",
-  "privacy_section_4_text": "OB AHOLKULARITZAk beharrezko neurri tekniko eta antolakuntzazkoak aplikatzen ditu erabiltzaileen datuak babesteko eta baimenik gabeko sarbideak ekiditeko.",
+  "privacy_section_4_text": "ONINTZA BASTARRIKA AHOLKULARITZA S.L beharrezko neurri tekniko eta antolakuntzazkoak aplikatzen ditu erabiltzaileen datuak babesteko eta baimenik gabeko sarbideak ekiditeko.",
 
   "privacy_section_5_title": "5. Erabiltzaileen eskubideak",
   "privacy_section_5_text": "Erabiltzaileek eskubidea dute beren datuetara sartzeko, zuzentzeko edo ezabatzeko. Horretarako, ondorengo helbidera idatzi dezakete:",
@@ -155,7 +155,7 @@
   "value_1_title": "Hurbiltasuna",
   "value_1_desc": "Ez gara zenbaki kudeatzaile soilak; gertutik jarraitzen dugu zure proiektuaren eguneroko bilakaera.",
   "value_2_title": "Konfiantza",
-  "value_2_desc": "Zidartasun eta gardentasun osoz lan egiten dugu, gure bezeroen lasaitasuna bermatuz alor guztietan.",
+  "value_2_desc": "Gardentasun osoz lan egiten dugu, gure bezeroen lasaitasuna bermatuz alor guztietan.",
   "value_3_title": "Eraginkortasuna",
   "value_3_desc": "Irtenbide azkarrak, seguruak eta egokiak eskaintzen ditugu legedi berrien eta administrazioaren aurrean."
   

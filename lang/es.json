@@ -84,7 +84,7 @@
   "ret_family_p": "Gestionamos de forma sencilla todas las prestaciones por paternidad y maternidad, protegiendo tu situación familiar.",
   "ret_info_mini2": "Prestaciones",
   "ret_info_h2_2": "Tus derechos garantizados",
-  "ret_info_p2_1": "Gestionamos las peticiones por paternidad y maternidad ademas de las ayudas económicas.",
+  "ret_info_p2_1": "Gestionamos las prestaciones por paternidad y maternidad ademas de las ayudas económicas.",
 "ret_info_p2_2": "Te ayudaremos a solicitar las subvenciones del Gobierno Vasco, bien por nacimiento de hijo o posteriormente por reducción de jornada o excedencia.",
   "lab_hero_badge": "Asesoría laboral",
   "lab_hero_h1": "Asesoramiento profesional en el ámbito laboral",
@@ -130,7 +130,7 @@
   "privacy_hero_text": "Los datos personales recogidos en esta página web serán tratados de forma segura y confidencial, respetando la normativa vigente en materia de protección de datos.",
 
   "privacy_section_1_title": "1. Tratamiento de datos personales",
-  "privacy_section_1_text": "Los datos facilitados por el usuario a través del formulario de contacto serán utilizados por OB AHOLKULARITZA para ponerse en contacto con el usuario y responder a la información solicitada.",
+  "privacy_section_1_text": "Los datos facilitados por el usuario a través del formulario de contacto serán utilizados por ONINTZA BASTARRIKA AHOLKULARITZA S.L para ponerse en contacto con el usuario y responder a la información solicitada.",
 
   "privacy_section_2_title": "2. Datos recogidos",
   "privacy_section_2_text": "En los formularios de la web podrán solicitarse los siguientes datos:",
@@ -146,7 +146,7 @@
   "privacy_use_3": "Facilitar información sobre los servicios solicitados",
 
   "privacy_section_4_title": "4. Seguridad de los datos",
-  "privacy_section_4_text": "OB AHOLKULARITZA aplica las medidas técnicas y organizativas necesarias para proteger los datos de los usuarios y evitar accesos no autorizados.",
+  "privacy_section_4_text": "ONINTZA BASTARRIKA AHOLKULARITZA S.L aplica las medidas técnicas y organizativas necesarias para proteger los datos de los usuarios y evitar accesos no autorizados.",
 
   "privacy_section_5_title": "5. Derechos de los usuarios",
   "privacy_section_5_text": "Los usuarios tienen derecho a acceder, rectificar o eliminar sus datos. Para ello, pueden escribir a la siguiente dirección:",
@@ -156,7 +156,7 @@
   "value_1_title": "Cercanía",
   "value_1_desc": "No somos simples gestores de números; seguimos de cerca la evolución diaria de tu proyecto.",
   "value_2_title": "Confianza",
-  "value_2_desc": "Trabajamos con total integridad y transparencia, garantizando tu tranquilidad en todos los ámbitos.",
+  "value_2_desc": "Trabajamos con total transparencia, garantizando tu tranquilidad en todos los ámbitos.",
   "value_3_title": "Eficacia",
   "value_3_desc": "Ofrecemos soluciones rápidas, seguras y adecuadas ante las nuevas leyes y la administración."
 }
