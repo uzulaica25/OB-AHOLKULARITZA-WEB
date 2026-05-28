@@ -134,6 +134,11 @@
 
   "privacy_section_2_title": "2. Datos recogidos",
   "privacy_section_2_text": "En los formularios de la web podrán solicitarse los siguientes datos:",
+  "book_appointment": "Reservar cita",
+
+  "form_success_title": "¡Gracias!",
+  "form_success_text": "Hemos recibido tu mensaje correctamente, nos pondremos en contacto contigo lo mas rapido posible",
+
   "privacy_data_1": "Nombre y apellidos",
   "privacy_data_2": "Correo electrónico",
   "privacy_data_3": "Número de teléfono",

@@ -11,6 +11,7 @@
   "intro_desc": "OB Aholkularitza Azpeitian kokatutako aholkularitza profesionala da. Gure helburua enpresei, autonomoei eta partikularrei zerbitzu integrala eskaintzea da, hurbiltasunarekin, konfiantzarekin eta kalitatezko kudeaketarekin. <br><br> Zure beharretara egokitzen gara, kudeaketa administratibotik haratago doan zerbitzu pertsonalizatua eskainiz.",
   "btn_team": "GURE TALDEA EZAGUTU ↓",
   "services_title": "Gure zerbitzuak",
+  "book_appointment": "Hitzordua Erreserbatu",
   "feature_btn": "IKUSI ZERBITZUAK",
   "services_subtitle": "Zure negoziorako aholkularitza integral eta profesionala, hurbiltasunez eskainia.",
   "btn_more": "GEHIAGO JAKIN →",
@@ -84,7 +85,11 @@
   "ret_family_p": "Aitasun eta amatasun prestazio guztiak modu errazean kudeatzen ditugu, zure familia egoera babestuz.",
   "ret_info_mini2": "Prestazioak",
   "ret_info_h2_2": "Zure eskubideak bermatuta",
-  "ret_info_p2_1": "Aitasun baja, amatasun prestazioak eta laguntza ekonomiko guztiak kudeatzen ditugu.",
+  
+  "form_success_title": "Eskerrik asko!",
+  "form_success_text": "Zure mezua zuzen jaso dugu, laister jarriko gara kontaktuan zurekin",
+
+  "ret_info_p2_1": "Aitatasun eta amatasun prestazioak eta laguntza ekonomiko guztiak kudeatzen ditugu.",
   "ret_info_p2_2": "Eusko Jaurlaritzako dirulaguntzak eskatzen lagunduko dizugu, bai umea jaiotakoan eta ondoren lanaldi murrizketa edo exzedentzia bat eskatzen baduzu.",
   "lab_hero_badge": "Lan-aholkularitza",
   "lab_hero_h1": "Laboral arloko aholkularitza profesionala",

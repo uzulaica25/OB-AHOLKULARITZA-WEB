@@ -7,6 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title data-i18n="kontaktua">Kontaktua</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<meta name="description"
+    content="Jarri harremanetan OB Aholkularitzarekin. Aholkularitza fiskala, laborala eta kontablea Azpeitian.">
+
+<meta name="keywords"
+    content="asesoría, aholkularitza, fiscal, laboral, contable, Azpeitia, Gipuzkoa">
+
+<link rel="canonical"
+    href="https://asesoriaob.eus/contacto.html">
+
+<link rel="icon"
+    type="image/png"
+    href="Media/terrealdayazpeitia/dayvo/logo-ong.png">
+
+<meta property="og:title"
+    content="Kontaktua | OB Aholkularitza">
+
+<meta property="og:description"
+    content="Kontaktua eta ordutegia OB Aholkularitzan.">
+
+<meta property="og:image"
+    content="https://asesoriaob.eus/Media/terrealdayazpeitia/dayvo/logo-ong.png">
+
+<meta property="og:url"
+    content="https://asesoriaob.eus/contacto.html">
+
+<meta property="og:type"
+    content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+
+<link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+```
+
+</head>
+
 
     <link rel="shortcut icon" href="Media/terrealdayazpeitia/dayvo/fav-1.png">
     <link rel="icon" sizes="16x16 24x24 32x32 48x48 64x64" href="Media/terrealdayazpeitia/dayvo/fav-1.png">
@@ -681,6 +724,33 @@ footer {
     color: inherit;
     text-decoration: none;
 }
+.calendly-contact-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 18px 24px;
+    border-radius: 18px;
+    background: white;
+    color: #A69F9F;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1rem;
+    transition: .3s ease;
+    margin-top: 16px;
+    border: 2px solid white;
+    box-shadow: 0 15px 35px rgba(255,255,255,0.08);
+}
+
+.calendly-contact-btn i {
+    font-size: 1.3rem;
+}
+
+.calendly-contact-btn:hover {
+    transform: translateY(-3px);
+    background: #f3f4f6;
+}
 
 .footer-bottom a:hover {
     opacity: 0.8;
@@ -817,6 +887,13 @@ footer {
                     <i class="fa-brands fa-whatsapp"></i>
                     <span>WhatsApp</span>
                 </a>
+                <a href="#"
+   class="calendly-contact-btn"
+   onclick="Calendly.initPopupWidget({url: 'https://calendly.com/asesoriaob/30min'}); return false;">
+
+    <i class="fa-regular fa-calendar"></i>
+    <span data-i18n="book_appointment">Hitzordua Erreserbatu</span>
+</a>
             </div>
 
             <div class="form-container">
@@ -914,10 +991,15 @@ footer {
 </div>
         </div>
     </footer>
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 
+<script src="https://assets.calendly.com/assets/external/widget.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+<!-- Calendly widget CSS -->
+
+
 
     <script>
        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
@@ -953,6 +1035,9 @@ if (dropdownArrow) {
             servicesDropdown.classList.toggle('open');
         }
     });
+}
+function getCurrentLang() {
+    return localStorage.getItem("lang") || "eu";
 }
         // HIZKUNTZAK ETA ITZULPENAK
         let lang = localStorage.getItem("lang") || "eu";
@@ -1000,13 +1085,21 @@ if (dropdownArrow) {
                     headers: { 'Accept': 'application/json' }
                 }).then(response => {
                     if (response.ok) {
-                        container.innerHTML = `
-                            <div style="text-align: center; padding: 40px 10px;">
-                                <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #25D366; margin-bottom: 20px;"></i>
-                                <h2 style="color: white; margin-bottom: 10px;">Eskerrik asko!</h2>
-                                <p style="color: #9ca3af; font-size: 1rem; line-height: 1.6;">Zure mezua zuzen jaso dugu. Gure lantaldea zurekin harremanetan jarriko da ahalik eta lasterren.</p>
-                            </div>
-                        `;
+                        fetch(`lang/${getCurrentLang()}.json`)
+    .then(res => res.json())
+    .then(t => {
+        container.innerHTML = `
+            <div style="text-align: center; padding: 40px 10px;">
+                <i class="fa-solid fa-circle-check" style="font-size: 3.5rem; color: #25D366; margin-bottom: 20px;"></i>
+                <h2 style="color: white; margin-bottom: 10px;">
+                    ${t.form_success_title || "Eskerrik asko!"}
+                </h2>
+                <p style="color: #9ca3af; font-size: 1rem; line-height: 1.6;">
+                    ${t.form_success_text || "Zure mezua jaso dugu laister jarriko gara kontaktuan zurekin."}
+                </p>
+            </div>
+        `;
+    });
                     } else {
                         response.json().then(data => {
                             if (Object.hasOwn(data, 'errors')) {
@@ -1022,7 +1115,9 @@ if (dropdownArrow) {
                     if(submitBtn) submitBtn.disabled = false;
                 });
             }
+            
         });
+        
     </script>
 </body>
 </html>
