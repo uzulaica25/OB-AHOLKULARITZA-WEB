@@ -367,7 +367,18 @@
 .footer-bottom a:hover {
     opacity: 0.8;
 }
+.nav-menu a.active {
+    color: white;
+}
 
+.nav-menu a.active::after {
+    width: 100%;
+}
+
+.dropdown-menu a.active {
+    background: rgba(255,255,255,0.12);
+    border-radius: 10px;
+}
         /* =========================================
            RESPONSIVE MEDIA QUERIES (850px)
         ========================================= */
@@ -645,7 +656,28 @@
                     }
                 });
             }).catch(err => console.error("Errorea hizkuntza kargatzean:", err));
+// ACTIVE MENU LOGIKA
+const currentPage = window.location.pathname.split("/").pop();
 
+document.querySelectorAll(".nav-menu a").forEach(link => {
+    const href = link.getAttribute("href");
+
+    if (href === currentPage) {
+        link.classList.add("active");
+
+        // Dropdown barruko orria bada,
+        // "Zerbitzuak" ere aktibatu
+        const dropdown = link.closest(".dropdown");
+
+        if (dropdown) {
+            const parentLink = dropdown.querySelector('a[href="servicios.html"]');
+
+            if (parentLink) {
+                parentLink.classList.add("active");
+            }
+        }
+    }
+});
         document.querySelectorAll("[data-lang]").forEach(link => {
             link.addEventListener("click", function (e) {
                 e.preventDefault();
